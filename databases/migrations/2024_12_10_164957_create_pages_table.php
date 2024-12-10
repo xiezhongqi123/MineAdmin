@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pages', function (Blueprint $table) {
+            $table->comment('页面表');
             $table->bigIncrements('id')->comment('主键id');
             $table->string('title')->comment('页面标题');
             $table->string('slug')->unique()->comment('页面别名');
